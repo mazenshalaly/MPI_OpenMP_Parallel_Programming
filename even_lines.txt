@@ -1,6 +1,6 @@
-Line 1: The quick brown fox jumps over the lazy dog
-Line 3: MPI enables distributed memory computing
-Line 5: C and C++ are powerful systems languages
-Line 7: Factorial computations can be parallelized
-Line 9: Even indexed lines go to one file
-Line 11: Hello World from parallel computing
+Line 0: The quick brown fox jumps over the lazy dog
+Line 2: MPI enables distributed memory computing
+Line 4: C and C++ are powerful systems languages
+Line 6: Factorial computations can be parallelized
+Line 8: Even indexed lines go to one file
+Line 10: Hello World from parallel computing

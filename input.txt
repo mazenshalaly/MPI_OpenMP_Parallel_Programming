@@ -1,0 +1,12 @@
+Line 1: The quick brown fox jumps over the lazy dog
+Line 2: OpenMP is great for shared memory parallelism
+Line 3: MPI enables distributed memory computing
+Line 4: Parallel programming speeds up computation
+Line 5: C and C++ are powerful systems languages
+Line 6: Matrix operations benefit from parallelism
+Line 7: Factorial computations can be parallelized
+Line 8: Palindrome checking is a classic string problem
+Line 9: Even indexed lines go to one file
+Line 10: Odd indexed lines go to another file
+Line 11: Hello World from parallel computing
+Line 12: Synchronization is key in parallel systems

@@ -1,6 +1,6 @@
-Line 2: OpenMP is great for shared memory parallelism
-Line 4: Parallel programming speeds up computation
-Line 6: Matrix operations benefit from parallelism
-Line 8: Palindrome checking is a classic string problem
-Line 10: Odd indexed lines go to another file
-Line 12: Synchronization is key in parallel systems
+Line 1: OpenMP is great for shared memory parallelism
+Line 3: Parallel programming speeds up computation
+Line 5: Matrix operations benefit from parallelism
+Line 7: Palindrome checking is a classic string problem
+Line 9: Odd indexed lines go to another file
+Line 11: Synchronization is key in parallel systems

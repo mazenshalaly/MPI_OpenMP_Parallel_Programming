@@ -121,26 +121,3 @@ mpirun --oversubscribe -np 10 ./parallel_system
 **Total logical threads:** 10 MPI processes × 4 OpenMP threads = **40 threads**
 
 ---
-
-## Bonus: CUDA Extension (Outline)
-
-For a GPU matrix operation on an 11th process (rank 10), add a CUDA kernel:
-
-```c
-// bonus_cuda.cu  (compile with nvcc, link with mpicc)
-__global__ void mat_square_kernel(float *A, float *out, int n) {
-    int idx = blockIdx.x * blockDim.x + threadIdx.x;
-    if (idx < n * n) out[idx] = A[idx] * A[idx];   // element-wise A²
-}
-```
-
-The master sends matrix A to rank 10 via MPI; rank 10 calls
-`cudaMemcpy` → launches kernel → `cudaMemcpy` back → `MPI_Send` result to master.
-
-Compile:
-```bash
-nvcc -c bonus_cuda.cu -o bonus_cuda.o
-mpicc -fopenmp parallel_system.c bonus_cuda.o -lcudart -o parallel_system
-mpirun --oversubscribe -np 11 ./parallel_system
-```
-#

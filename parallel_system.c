@@ -152,18 +152,20 @@ static void worker_file(int rank)
     int  even_cnt = 0, odd_cnt = 0;
 
     /* Serial collection into separate arrays (parallel read of lines array) */
-    #pragma omp parallel
-    {
-        #pragma omp single
-        {
+    //#pragma omp parallel
+    
+        #pragma omp parallel for ordered schedule (static , 1)
+        
             for (int i = 0; i < total; i++) {
-                if (i % 2 == 0)
+		#pragma omp ordered
+		if (i % 2 == 0)
+
                     strncpy(even_lines[even_cnt++], lines[i], MAX_LINE);
                 else
                     strncpy(odd_lines [odd_cnt++ ], lines[i], MAX_LINE);
-            }
+            
         }
-    }
+    
 
     /* Write output files */
     FILE *fe = fopen("even_lines.txt", "w");
